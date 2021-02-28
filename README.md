@@ -1,4 +1,4 @@
-# ExSurvey
+# Site for Elixir Developer Ecosystem Survey 
 
 To start your Phoenix server:
 

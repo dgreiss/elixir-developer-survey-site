@@ -1,0 +1,15 @@
+<main class="flex flex-1">
+  <div class="flex flex-1">
+    <div class="flex-none h-full text-white bg-gray-600">
+      <%= live_render @socket, ExSurveyWeb.SidebarLive, id: :sidebar %>
+    </div>
+    <div class="flex-1 h-full">
+      <main class="flex flex-col h-full text-blue-gray-700">
+        <div class="w-full">
+          <%= live_render @socket, ExSurveyWeb.NavLive, id: :nav %>
+        </div>
+        <div class="flex-1 m-2 "><%= @inner_content %></div>
+      </main>
+    </div>
+  </div>
+</main>

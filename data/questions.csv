@@ -1,0 +1,57 @@
+id,question
+1,Are you actively using Elixir in either professional or personal projects?
+2,Can you share why you stopped using or never used Elixir?
+3,What solutions was the Elixir ecosystem lacking?
+4,Which language did you change to?
+5,How long have you been using Elixir?
+6,What is the most recent version of Elixir that you have used?
+7,How did you first learn about Elixir?
+8,What sources of information was most impactful for learning Elixir?
+9,Have you written any Erlang?
+10,Have you written in any other BEAM based language?
+11,What is your age range?
+12,Which gender do you identify as?
+13,In which country do you currently reside?
+14,Do you have a college degree in Computer Science or similar degree?
+15,What part of Elixir did you find most difficult to learn?
+16,Do you maintain any Open Source (OSS) Elixir libraries?
+17,Have you made contributions to anyone else's OSS Elixir libraries?
+18,Have you made OSS contributions back to Elixir?
+19,How often do you attend local Elixir meetups?
+20,Do you help organize Elixir meetups?
+21,Do you attend your continent's major Elixir Conference
+22,Do you attend any regional Elixir/Erlang conferences?
+23,Do you participate in any online Elixir chats?
+24,Which Elixir Podcasts do you listen to?
+25,Which Elixir newsletters are you subscribed to?
+26,What industry is your company in?
+27,What is your role within your company?
+28,Does your company use Elixir?
+29,How long has your company been using Elixir?
+30,In what capacities is your company using Elixir?
+31,How many engineers are using Elixir at your company?
+32,Did your company migrate from another language or choose Elixir for a new project?
+33,Did your company migrate from another language / framework?
+34,What outcomes did your team experience after adopting Elixir?
+35,Which reasons prevented Elixir from being adopted at your company?
+36,Can you say which language(s) and describe why it won?
+37,Which operating system do you primarily develop on?
+38,Which editor/IDE do you primarily write Elixir with?
+39,How do you debug?
+40,Which operating system do you deploy to?
+41,What database do you primarily use?
+42,Do you write tests?
+43,Have you ever used Hot Code Reloading in production?
+44,Where do you deploy your Elixir applications to?
+45,How are you deploying your Elixir application?
+46,If your project(s) uses Continuous Integration which is it?
+47,If your team is enforcing code formatting what methods do you use?
+48,If there is one library that you are excited about in 2020 which is it?
+49,Are you using Phoenix?
+50,What is the most recent version of Phoenix that you have used?
+51,Are you running Phoenix in production?
+52,How are you using Phoenix?
+53,Are you using Nerves?
+54,What is the most recent version of Nerves that you have used?
+55,Are you using Scenic?
+56,Is your Nerves application distributed across many devices?

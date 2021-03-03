@@ -1,9 +1,10 @@
 alias ExSurvey.Repo
 alias ExSurvey.Survey
 alias ExSurvey.Survey.Response
+
 alias NimbleCSV.RFC4180
 
-"data/questions.csv"
+Path.join([Application.app_dir(:ex_survey), "priv/data/questions.csv"])
 |> File.stream!()
 |> RFC4180.parse_stream()
 |> Enum.map(fn [id, question] ->
@@ -11,7 +12,7 @@ alias NimbleCSV.RFC4180
   |> Survey.create_survey_question()
 end)
 
-"data/survey_summary.csv"
+Path.join([Application.app_dir(:ex_survey), "priv/data/survey_summary.csv"])
 |> File.stream!()
 |> RFC4180.parse_stream()
 |> Enum.map(fn [id, answer, n, prop] ->
@@ -24,7 +25,7 @@ end)
   |> Survey.create_response_summary()
 end)
 
-"data/survey.csv"
+Path.join([Application.app_dir(:ex_survey), "priv/data/survey.csv"])
 |> File.stream!()
 |> RFC4180.parse_stream()
 |> Stream.map(fn [id, start_date, submit_date, network_id, question_id, _question, answer] ->

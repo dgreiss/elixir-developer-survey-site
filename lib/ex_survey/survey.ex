@@ -28,8 +28,33 @@ defmodule ExSurvey.Survey do
   def get_summary(question_id) do
     q =
       from s in Summary,
-        where: [question_id: ^question_id]
+        join: q in Question,
+        on: s.question_id == q.legacy_id,
+        where: [question_id: ^question_id],
+        order_by: s.prop,
+        select: {q.question, s.n, s.prop, s.answer}
 
     Repo.all(q)
+  end
+
+  def get_summary_map(question_id) do
+    question_id
+    |> get_summary()
+    |> to_map()
+  end
+
+  defp to_map(list) do
+    list
+    |> Enum.reduce(
+      %{question: [], n: [], prop: [], labels: []},
+      fn {question, n, prop, label}, acc ->
+        %{
+          question: question,
+          n: [n | acc.n],
+          prop: [Float.round(prop * 100, 2) | acc.prop],
+          labels: [label | acc.labels]
+        }
+      end
+    )
   end
 end

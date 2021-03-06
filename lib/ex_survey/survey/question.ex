@@ -1,6 +1,7 @@
 defmodule ExSurvey.Survey.Question do
   use Ecto.Schema
   import Ecto.Changeset
+
   alias ExSurvey.Survey.Question
 
   schema "questions" do

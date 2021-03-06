@@ -2,6 +2,8 @@ defmodule ExSurvey.Survey.Summary do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias ExSurvey.Survey.Summary
+
   schema "summaries" do
     field :question_id, :integer
     field :answer, :string
@@ -11,7 +13,7 @@ defmodule ExSurvey.Survey.Summary do
   end
 
   @doc false
-  def changeset(summary, attrs) do
+  def changeset(%Summary{} = summary, attrs) do
     summary
     |> cast(attrs, [:question_id, :answer, :n, :prop])
   end

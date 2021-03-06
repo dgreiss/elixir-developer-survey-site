@@ -1,9 +1,11 @@
 defmodule ExSurveyWeb.ExperienceLive do
-  # How long have you been using Elixir?
-  # What is the most recent version of Elixir?
-  # Have you written Erlang?
-  # Have you written any other BEAM langs?
-
+  @moduledoc """
+  This page hase the following questions from the survey:
+    1. How long have you been using Elixir?
+    2. What is the most recent version of Elixir?
+    3. Have you written Erlang?
+    4. Have you written any other BEAM langs?
+  """
   use ExSurveyWeb, :live_view
 
   alias ExSurvey.Survey

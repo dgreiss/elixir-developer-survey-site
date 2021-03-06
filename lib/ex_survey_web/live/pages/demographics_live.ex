@@ -1,9 +1,11 @@
 defmodule ExSurveyWeb.DemographicsLive do
-  # What is your age range?
-  # Which gender do you identify as?
-  # In which country do you reside?
-  # Do you have a college degree in CS?
-
+  @moduledoc """
+  This page has the following questions from the survey:
+    1. What is your age range?
+    2. Which gender do you identify as?
+    3. In which country do you reside?
+    4. Do you have a college degree in CS?
+  """
   use ExSurveyWeb, :live_view
 
   alias ExSurvey.Survey

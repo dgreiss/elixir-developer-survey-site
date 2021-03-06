@@ -1,15 +1,17 @@
-defmodule ExSurveyWeb.OpenSourceLive do
+defmodule ExSurveyWeb.AdoptionLive do
   @moduledoc """
   This page has the following questions from the survey:
-    1. Do you maintain any Open Source (OSS) Elixir libraries?
-    2. Have you made contributions to anyone else's OSS Elixir libraries?
-    3. Have you made OSS contributions back to Elixir?
+    1. Are you currently using Elixir?
+    2. Can you share why you stopped using Elixir?
+    3. What solutions was the Elixir Ecosystem Lacking?
+    4. Which languages did you change to?
   """
+
   use ExSurveyWeb, :live_view
 
   alias ExSurvey.Survey
 
-  @questions [16, 17, 18]
+  @questions [1, 2, 3, 4]
 
   @impl true
   def mount(_params, _session, socket) do

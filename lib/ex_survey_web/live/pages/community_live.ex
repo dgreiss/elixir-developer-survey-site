@@ -1,11 +1,14 @@
 defmodule ExSurveyWeb.CommunityLive do
-  # How often do you attend local Elixir meetups?
-  # Do you help organize Elixir meetups?
-  # Do you attend your continent's major Elixir Conference?
-  # Do you attend any regional Elixir/Erlang conferences?
-  # Do you participate in any online Elixir chats?
-  # Which Elixir Podcasts do you listen to?
-  # Which Elixir newsletters are you subscribed to?
+  @moduledoc """
+  This page has the following questions from the survey:
+    1. How often do you attend local Elixir meetups?
+    2. Do you help organize Elixir meetups?
+    3. Do you attend your continent's major Elixir Conference?
+    4. Do you attend any regional Elixir/Erlang conferences?
+    5. Do you participate in any online Elixir chats?
+    6. Which Elixir Podcasts do you listen to?
+    7. Which Elixir newsletters are you subscribed to?
+  """
 
   use ExSurveyWeb, :live_view
 

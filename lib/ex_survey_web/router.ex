@@ -23,6 +23,10 @@ defmodule ExSurveyWeb.Router do
     live "/resources", ResourcesLive
     live "/open-source", OpenSourceLive
     live "/community", CommunityLive
+    live "/industry", IndustryLive
+    live "/setup-and-practices", SetupLive
+    live "/deployment", DeploymentLive
+    live "/libraries", LibrariesLive
   end
 
   # Other scopes may use custom stacks.

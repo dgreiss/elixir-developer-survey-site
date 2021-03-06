@@ -1,7 +1,7 @@
 <nav class="flex flex-col w-64 h-full border-r-2 border-purple-800">
   <div class="h-16 bg-purple-800"></div>
   <div class="flex flex-col justify-between flex-1 pt-32 bg-blue-gray-100">
-    <ul class="mx-auto space-y-2 tracking-wider text-gray-800 uppercase">
+    <ul class="mx-8 space-y-4 tracking-wider text-gray-800 uppercase">
       <li>
         <%= live_redirect "Demographics", to: Routes.live_path(@socket, ExSurveyWeb.DemographicsLive) %>
       </li>
@@ -20,6 +20,18 @@
       </li>
       <li>
         <%= live_redirect "Community", to: Routes.live_path(@socket, ExSurveyWeb.CommunityLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Industry", to: Routes.live_path(@socket, ExSurveyWeb.IndustryLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Developer Setup and Practices", to: Routes.live_path(@socket, ExSurveyWeb.SetupLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Deployment", to: Routes.live_path(@socket, ExSurveyWeb.DeploymentLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Libraries", to: Routes.live_path(@socket, ExSurveyWeb.LibrariesLive) %>
       </li>
     </ul>
   </div>

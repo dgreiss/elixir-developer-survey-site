@@ -1,24 +1,41 @@
 import Chart from 'chart.js';
 
 let Hooks = {}
-Hooks.Chart = {
-  mounted() {
-    var ctx = this.el.getContext('2d');
-    var data = this.el.dataset.chart;
-    data = JSON.parse(data);
+Hooks.BarChart = {
+  getCanvasContext() {
+    return this.el.getContext('2d');
+  },
+  getData() {
+    return JSON.parse(this.el.dataset.chart);
+  },
+  calculateBarThickness(data) {
+    return data.length > 8 ? 20 : 40
+  },
+  renderChart(ctx, data) {
     new Chart(ctx, {
       type: 'horizontalBar',
       data: {
         labels: data.labels,
         datasets: [{
-          data: data.data,
+          data: data.prop,
           backgroundColor: [
             '#3730A3',
             '#3730A3',
             '#3730A3',
             '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
+            '#3730A3',
           ],
-          barThickness: 40
+          barThickness: this.calculateBarThickness(data.labels)
         }]
       },
       options: {
@@ -42,10 +59,10 @@ Hooks.Chart = {
           }],
         },
       }
-    });
-  }
+    })
+  },
+  mounted() { this.renderChart(this.getCanvasContext(), this.getData()) },
+  updated() { this.renderChart(this.getCanvasContext(), this.getData()) }
 }
 
-export {
-  Hooks
-};
+export { Hooks };

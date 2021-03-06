@@ -17,7 +17,12 @@ defmodule ExSurveyWeb.Router do
   scope "/", ExSurveyWeb do
     pipe_through :browser
 
-    live "/", IntroductionLive
+    live "/", DemographicsLive
+    live "/elixir-experience", ExperienceLive
+    live "/adoption", AdoptionLive
+    live "/resources", ResourcesLive
+    live "/open-source", OpenSourceLive
+    live "/community", CommunityLive
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,9 @@
+<h1 class="items-center w-full py-24 mx-auto text-xl tracking-widest text-center uppercase">
+  Elixir Developer Survey Questions on Contributions to Open Source
+</h1>
+
+<%= for {data, index} <- Enum.with_index(@data) do %>
+<div class="w-1/2 mx-auto mb-32">
+  <%= live_component @socket, BarChartLive, id: index, data: data %>
+</div>
+<% end %>

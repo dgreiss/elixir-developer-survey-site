@@ -1,0 +1,8 @@
+  <h3 class="mb-4 text-2xl text-center">Q. <%= @data.question %></h3>
+
+  <canvas
+    id="<%= "q#{@id}" %>"
+    data-chart="<%= Jason.encode!(@data) %>"
+    phx-hook="BarChart"
+  ></canvas>
+  </div>

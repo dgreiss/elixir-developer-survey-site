@@ -3,54 +3,23 @@
   <div class="flex flex-col justify-between flex-1 pt-32 bg-blue-gray-100">
     <ul class="mx-auto space-y-2 tracking-wider text-gray-800 uppercase">
       <li>
-        <a
-          class="flex items-center py-1 rounded"
-          href="#"
-        >
-          <span class="flex-1 block pl-4">
-            Introduction
-          </span>
+        <%= live_redirect "Demographics", to: Routes.live_path(@socket, ExSurveyWeb.DemographicsLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Experience", to: Routes.live_path(@socket, ExSurveyWeb.ExperienceLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Adoption", to: Routes.live_path(@socket, ExSurveyWeb.AdoptionLive) %>
+      </li>
+      <li>
+        <%= live_redirect "Resources", to: Routes.live_path(@socket, ExSurveyWeb.ResourcesLive) %>
         </a>
       </li>
       <li>
-        <a
-          class="flex items-center py-1 rounded"
-          href="#"
-        >
-          <span class="flex-1 block pl-4">
-            Questions 11-20
-          </span>
-        </a>
+        <%= live_redirect "Open Source", to: Routes.live_path(@socket, ExSurveyWeb.OpenSourceLive) %>
       </li>
       <li>
-        <a
-          class="flex items-center flex-1 py-1 pr-1 rounded"
-          href="#"
-        >
-          <span class="flex-1 block pl-4">
-            Questions 21-30
-          </span>
-        </a>
-      </li>
-      <li>
-        <a
-          class="flex items-center flex-1 py-1 pr-1 rounded"
-          href="#"
-        >
-          <span class="flex-1 block pl-4">
-            Questions 31-40
-          </span>
-        </a>
-      </li>
-      <li>
-        <a
-          class="flex items-center py-1 rounded"
-          href="#"
-        >
-          <span class="flex-1 block pl-4">
-            Questions 41-50
-          </span>
-        </a>
+        <%= live_redirect "Community", to: Routes.live_path(@socket, ExSurveyWeb.CommunityLive) %>
       </li>
     </ul>
   </div>
